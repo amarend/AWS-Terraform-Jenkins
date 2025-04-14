@@ -10,7 +10,7 @@ pipeline {
         stage('Clone Repo') {
             steps {
                 // Clone the repo that contains your Terraform files
-                git 'https://github.com/your/repo.git'
+                git 'https://github.com/amarend/AWS-Terraform-Jenkins/'
             }
         }
         
