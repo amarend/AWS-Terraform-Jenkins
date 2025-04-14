@@ -1,15 +1,6 @@
-pipeline {
-    agent any
-    environment {
-        AWS_ACCESS_KEY = credentials('AWS_ACCESS_KEY')
-        AWS_SECRET_KEY = credentials('AWS_SECRET_KEY')
-    }
-    stages {
-        stage('Test Secrets') {
-            steps {
-                echo "Access Key: $AWS_ACCESS_KEY"
-                echo "Secret Key is available (but not echoed for security)"
-            }
-        }
+stage('Check Env') {
+    steps {
+        echo "Access Key is set to: ${env.AWS_ACCESS_KEY}"
+        echo "Secret Key is available: ${env.AWS_SECRET_KEY != null}"
     }
 }
