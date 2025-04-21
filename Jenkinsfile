@@ -1,12 +1,15 @@
 pipeline {
     agent any
     
-    environment {
-        AWS_ACCESS_KEY = credentials('AWS_ACCESS_KEY')
-        AWS_SECRET_KEY = credentials('AWS_SECRET_KEY')
-    }
-    
     stages {
+       stage('Check Env') {
+            steps {
+                withCredentials([
+                    string(credentialsId: 'AWS_ACCESS_KEY', variable: 'AWS_ACCESS_KEY'),
+                    string(credentialsId: 'AWS_SECRET_KEY', variable: 'AWS_SECRET_KEY')
+                ])
+            }
+       }
         stage('Clone Repo') {
             steps {
                 // Clone the repo that contains your Terraform files
