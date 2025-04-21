@@ -5,7 +5,7 @@ pipeline {
         stage('Clone Repo') {
             steps {
                 echo "Step 1 - Cloning Repo"
-                git 'https://github.com/amarend/AWS-Terraform-Jenkins.git'
+                git branch: 'main', url: 'https://github.com/amarend/AWS-Terraform-Jenkins.git'
             }
         }
 
