@@ -1,48 +1,52 @@
 pipeline {
     agent any
-
+    
     environment {
-        AWS_DEFAULT_REGION = 'us-east-1'
-        TF_VAR_aws_access_key = credentials('AWS_ACCESS_KEY_ID')
-        TF_VAR_aws_secret_key = credentials('AWS_SECRET_ACCESS_KEY')
+        AWS_ACCESS_KEY = credentials('AWS_ACCESS_KEY')
+        AWS_SECRET_KEY = credentials('AWS_SECRET_KEY')
     }
-
+    
     stages {
-        stage('Checkout') {
+        stage('Clone Repo') {
             steps {
-                echo 'Checking out code...'
-                checkout scm
+                // Clone the repo that contains your Terraform files
+                git 'https://github.com/amarend/AWS-Terraform-Jenkins'
             }
         }
-
+        
         stage('Initialize Terraform') {
             steps {
-                echo 'Initializing Terraform...'
+                // Initialize Terraform working directory
                 sh 'terraform init'
             }
         }
-
-        stage('Plan Terraform') {
+        
+        stage('Plan Terraform Deployment') {
             steps {
-                echo 'Planning Terraform deployment...'
-                sh 'terraform plan -out=tfplan'
+                // Plan the Terraform deployment with the provided AWS credentials
+                sh """
+                    terraform plan \
+                        -var 'aws_access_key=$AWS_ACCESS_KEY' \
+                        -var 'aws_secret_key=$AWS_SECRET_KEY'
+                """
             }
         }
-
-        stage('Apply Terraform') {
+        
+        stage('Apply Terraform Configuration') {
             steps {
-                echo 'Applying Terraform plan...'
-                sh 'terraform apply -auto-approve tfplan'
+                // Apply the Terraform configuration and launch the EC2 instance
+                sh """
+                    terraform apply -auto-approve \
+                        -var 'aws_access_key=$AWS_ACCESS_KEY' \
+                        -var 'aws_secret_key=$AWS_SECRET_KEY'
+                """
             }
         }
     }
-
+    
     post {
-        failure {
-            echo 'Terraform apply failed!'
-        }
-        success {
-            echo 'EC2 instance created successfully!'
+        always {
+            echo "Terraform deployment completed"
         }
     }
 }
