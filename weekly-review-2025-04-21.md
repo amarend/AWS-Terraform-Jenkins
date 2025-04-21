@@ -12,3 +12,10 @@
 Error :
  ERROR: Couldn't find any revision to build. Verify the repository and branch configuration for this job.
  Issue with Git Repo url
+
+
+Windows command to start and stop Jenkins from CLI 
+net stop jenkins
+net start jenkins
+
+The AWS Secret are stored as Secret text in Jenkins
