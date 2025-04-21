@@ -8,3 +8,7 @@
   1. Bounce a EC2 instance from there
   2. Create a security group
   3. Create a key
+
+Error :
+ ERROR: Couldn't find any revision to build. Verify the repository and branch configuration for this job.
+ Issue with Git Repo url
