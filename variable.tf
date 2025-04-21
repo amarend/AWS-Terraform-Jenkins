@@ -13,7 +13,7 @@ variable "aws_secret_key" {
 variable "region" {
   description = "AWS region to deploy resources"
   type        = string
-  default     = "us-east-1"
+  default     = "ap-southeast-2"
 }
 
 variable "instance_type" {
