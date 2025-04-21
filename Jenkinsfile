@@ -10,6 +10,7 @@ pipeline {
         stage('Clone Repo') {
             steps {
                 // Clone the repo that contains your Terraform files
+                echo "Step 1"
                 git 'https://github.com/amarend/AWS-Terraform-Jenkins.git'
             }
         }
@@ -17,6 +18,7 @@ pipeline {
         stage('Initialize Terraform') {
             steps {
                 // Initialize Terraform working directory
+                echo "Step 2"
                 sh 'terraform init'
             }
         }
