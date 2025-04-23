@@ -17,5 +17,6 @@ Error :
 Windows command to start and stop Jenkins from CLI 
 net stop jenkins
 net start jenkins
+curl -X POST http://localhost:8080/restart
 
 The AWS Secret are stored as Secret text in Jenkins
