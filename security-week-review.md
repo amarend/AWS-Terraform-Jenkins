@@ -28,7 +28,10 @@ Container should not be used as root images that also is the cause of the issue,
 
 What are the cases where the attack surface/TruRisk is greater.
 When the resources are internal when will the risk still be high.
+
 What is Drift Container? -- See if you can get an example to explain.
+A "drift image" and "drift container" refer to the situation where a containerized application deviates from its original, intended state, often due to unauthorized or unintended changes made during runtime.
+
 Container Runtime can be best way, however as I could read not used much -- How do you handle situations like that?
 Is there an alternative way?
 
@@ -58,7 +61,17 @@ Unified TruRisk -- Consolidated risk of Misconf ++ Vulnerabilities
 External Attack Surface
 One click Remediation
 
+What is QDS and TruRisk Difference -- Tool Specific (Almost all tools have similar Set-up)
 
+TruRisk™ Score is the overall risk score associated with the asset based on the following contributing factors:
+
+Asset Criticality Score (ACS) - Indicates criticality level of your asset from 1 (lowest) to 5 (highest) 
+Qualys Detection Score (QDS) -  Indicates risk score for each severity level (Critical [C], High [H], Medium [M], Low [L])
+Weighing factor (w) - Auto-assigned weighing factor (w) for each severity level of QIDs
+What is Asset Crticality -- 
+https://docs.qualys.com/en/cs/latest/container_assets/asset_criticality_score.htm
+
+There is a formula to define 
 
 
 
