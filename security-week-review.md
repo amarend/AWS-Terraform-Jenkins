@@ -72,6 +72,37 @@ What is Asset Crticality --
 https://docs.qualys.com/en/cs/latest/container_assets/asset_criticality_score.htm
 
 There is a formula to define 
+==============
+Generic Container Security 
+
+Contaniners - capabilities, cgroups, namespaces 
+These are basic blocks, and it helps to help control
+namespaces helps in isolating the filesystem etc
+Capabilities what container can performed by root user, or what can a user perform.
+There are 14 such capabilities
+
+If you want to drop any capablity from Docker you can use the command 
+docker run -it --cap-drop=NET\_RAW -it sh
+
+Cgroup limiting the resources - Memory, CPU , IO, network, not enabled by default by running the container.
+
+Namespaces creates isolation, and you can check that by creating separate container go inside and check the processes running inside it 
+docker exec <> it ps aux | grep <process>
+
+
+https://www.youtube.com/watch?v=ZMjTF9s4r4g&list=PL_mcQ3_IEM7LQtDNAzJdxXnMjSl01nfvv&index=2
+
+=======================
+SAST - Some open source tools to start with 
+Sonarqube
+Semgrep 
+Bandit
+FindSecBugs
+Cppcheck
+=================
+Semgrep - Focus 1
+Then go ahead with something of Java/C/C++
+=======
 
 
 
