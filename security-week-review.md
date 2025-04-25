@@ -70,6 +70,37 @@ Qualys Detection Score (QDS) -  Indicates risk score for each severity level (Cr
 Weighing factor (w) - Auto-assigned weighing factor (w) for each severity level of QIDs
 What is Asset Crticality -- 
 https://docs.qualys.com/en/cs/latest/container_assets/asset_criticality_score.htm
+=======================
+What is Container Escape - 
+Container escape is a security term that refers to a situation where an attacker breaks out of a container (like a Docker container or a Kubernetes pod) and gains access to the host system or other containers running on the same host.
+
+Why it's a big deal:
+Containers are designed to be isolated environments. If someone escapes from one, they could potentially:
+
+Access sensitive data on the host
+Interfere with or access other containers
+Install malware or open backdoors on the host system
+
+
+How container escapes can happen:
+Here are some common methods:
+
+Kernel vulnerabilities
+Containers share the host’s kernel. If there's a vulnerability, it can be exploited to gain root access on the host.
+
+Misconfigured container privileges
+Running containers in --privileged mode
+
+Mounting the host filesystem inside the container (-v /:/mnt)
+These can provide direct paths to escape.
+
+Exploiting container runtimes
+Bugs in container runtimes like runc, containerd, or CRI-O can sometimes allow code to escape the container boundary.
+
+Insecure host setups
+If the host system isn't hardened (e.g., no seccomp, AppArmor, or SELinux profiles), escaping becomes much easier.
+
+========================
 
 There is a formula to define 
 ==============
