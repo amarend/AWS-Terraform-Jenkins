@@ -204,6 +204,22 @@ Nested Regex could cause these errors like -
 We can add the time limit and then also do then number of inputs to fix that.
 
 
+==========
+2. Prototype Pollution 
+happens when an attacker manipulates an object’s prototype chain, typically by injecting malicious keys like __proto__, constructor, or prototype into user-controlled JSON or object merges.
+
+Can bypass security checks (e.g., if (user.isAdmin))
+May cause application crashes
+Could lead to remote code execution in rare cases
+
+Validate input	Block __proto__, constructor, prototype keys in user input
+Use safe libraries	Avoid vulnerable versions of lodash, jQuery, or use patched forks like deepmerge with protections
+Freeze prototype	Use Object.freeze(Object.prototype) to prevent modification (use carefully — it’s global)
+Avoid deep merges	Or only merge whitelisted keys
+
+###Focus on how and where to find it in code with bare eyes and no tools in the future.
+
+
 
 
 
