@@ -182,6 +182,33 @@ Maintained by	The FIRST.org EPSS SIG (Special Interest Group)
 
 Priortize with high CVSS and EPSS would be a good use case.
 
+==========
+Understanding the vulnerabilities and respective solutions with examples.
+1.  Asymmetric Resource Consumption (Amplification) what is it?
+Asymmetric Resource Consumption (Amplification) is a type of Denial of Service (DoS) attack where an attacker causes a target system to use disproportionately more resources (CPU, memory, bandwidth, etc.) than the attacker expends.
+
+Attack Type	Description
+HTTP Flood -------	Sending many small HTTP requests that require large backend processing
+Regex DoS (ReDoS) ------	Sending a crafted input that triggers expensive regex evaluation
+DNS Amplification ------	Sending small queries to DNS servers that respond with large replies, often redirected to a victim
+Compression Bombs	---- Submitting a small compressed file that expands to gigabytes in memory
+
+Input validation and rate limiting
+Use of efficient algorithms (especially in parsing/regex)
+Caching and throttling responses
+Protecting exposed services (e.g., with firewalls, CDNs)
+
+Nested Regex could cause these errors like - 
+(r"(a+)+$") -- This is nested 
+(r"a+$") -- This is solution, but there are other ways as well.
+We can add the time limit and then also do then number of inputs to fix that.
+
+
+
+
+
+
+
 
 
 
