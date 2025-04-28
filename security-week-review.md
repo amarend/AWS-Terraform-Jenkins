@@ -14,6 +14,8 @@ What all the scan runs on Registries and Build and also runtie containers
 -- Can have clear text message.
 ========================
 
+
+
 Baisc Docker Concets  :
 1. What are layers in docker
 In Docker, layers are the building blocks of Docker images. Each command in a Dockerfile (like RUN, COPY, or ADD) creates a new layer. These layers stack on top of each other to form the final image.
@@ -134,17 +136,19 @@ Cgroup limiting the resources - Memory, CPU , IO, network, not enabled by defaul
 Namespaces creates isolation, and you can check that by creating separate container go inside and check the processes running inside it 
 docker exec <> it ps aux | grep <process>
 
-
 https://www.youtube.com/watch?v=ZMjTF9s4r4g&list=PL_mcQ3_IEM7LQtDNAzJdxXnMjSl01nfvv&index=2
 
-=======================
+
+================
+
 SAST - Some open source tools to start with 
 Sonarqube
 Semgrep 
 Bandit
 FindSecBugs
 Cppcheck
-=============
+
+==================
 
 Semgrep - 28th April.
 Login to semgrep with your login account - Github/Gitlab
@@ -163,9 +167,20 @@ See if you could add new findings by scanning the code and then run the scan.
 ====================
 
 
+Scanned the code, what are few issues - What is EPSS?
 
+EPSS stands for Exploit Prediction Scoring System. It's a data-driven framework designed to estimate the likelihood that a software vulnerability will be exploited in the wild within a specific time frame (typically 30 days).
+It is based on risk and not severity like cvss
 
+Scoring system is between 0-1 
+0 - Less possiblity of exploit 
+1- Possibility of exploit
 
+Dynamic	Updated regularly based on new threat intelligence
+Data-Driven	Uses machine learning on historical exploit data, CVE metadata, and external sources
+Maintained by	The FIRST.org EPSS SIG (Special Interest Group)
+
+Priortize with high CVSS and EPSS would be a good use case.
 
 
 
