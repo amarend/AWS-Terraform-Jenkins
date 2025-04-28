@@ -12,6 +12,20 @@ What all the scan runs on Registries and Build and also runtie containers
 -- Malware can be embedded
 -- Use of untrusted certificate
 -- Can have clear text message.
+========================
+
+Baisc Docker Concets  :
+1. What are layers in docker
+In Docker, layers are the building blocks of Docker images. Each command in a Dockerfile (like RUN, COPY, or ADD) creates a new layer. These layers stack on top of each other to form the final image.
+
+Base layer: Usually a minimal OS like ubuntu, alpine, or debian.
+Intermediate layers: Created by each subsequent instruction (like installing packages, copying files, etc.).
+Final layer: The result of all layers combined, representing your final image.
+
+Caching: Docker caches each layer, so if you rebuild an image and the earlier layers haven’t changed, Docker reuses them—making builds faster.
+Efficiency: Shared layers across images mean less disk space and faster downloads.
+Immutability: Once a layer is created, it doesn’t change. New layers build on top rather than modifying existing ones.
+
 
 ------TO DO: See a example of all of these and then try running a scan to see how it works and what all it shows, for better understanding.
 
