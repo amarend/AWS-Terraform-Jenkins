@@ -144,10 +144,28 @@ Semgrep
 Bandit
 FindSecBugs
 Cppcheck
-=================
-Semgrep - Focus 1
-Then go ahead with something of Java/C/C++
-=======
+=============
+
+Semgrep - 28th April.
+Login to semgrep with your login account - Github/Gitlab
+It will Ask to create an organisation
+There are different ways to scan - Github , CLI, Gitlab etc.
+You can select repositories, I have chosen the Hackerrank one -- This I would use for Semgrep purposes going forward.
+You need to give code access to Semgrep for it to scan -- Only given to hackerrank repo
+You can run scan after the above 2 are set up.
+
+What are the focus areas here - Add new codes which are vulnerable, read on the same.
+And understand vulnerabilities, and fix remediation part of it and then write about it.
+
+No findings done.
+See if you could add new findings by scanning the code and then run the scan.
+
+====================
+
+
+
+
+
 
 
 
