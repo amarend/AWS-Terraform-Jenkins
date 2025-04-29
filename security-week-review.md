@@ -184,6 +184,31 @@ In particular, cross-file analysis includes cross-file taint analysis, which tra
 Other analyses performed across files include constant propagation and type inference.
 
 
+WHAT IS REACHABILITY 
+Reachability refers to whether or not a vulnerable code pattern from a dependency is used in the codebase that imports it.
+In Semgrep Supply Chain, both a dependency's vulnerable version and code pattern must match for a vulnerability to be considered reachable.
+
+
+How do we enable the Code part 
+Go to Settings > Code analysis > Can create false positives.
+
+# Preferred; includes support for all Semgrep Code languages
+semgrep ci --pro-languages
+
+# Does not include all Semgrep Code language features
+semgrep ci --oss-only
+
+As per my understanding till now, you would need to login to the semgrep from root directory and then run the scan, else it runs managed scans
+semgrep login & semgrep scan
+
+
+
+Semgrep Code identifies the languages used in your repositories and only runs rules applicable to those languages. For example, adding Ruby and Python rules in your Policies doesn't affect the scan speed for Python-only repositories. Only Python rules are run for Python repositories.
+
+Was able to run and find out what can be done here?
+And saw that we have too many things to understand 
+-- YAML files
+-- Rules and how it works.
 ====================
 
 
