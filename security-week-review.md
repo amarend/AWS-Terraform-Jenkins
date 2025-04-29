@@ -229,6 +229,22 @@ Only evaluates Python literals: strings, numbers, tuples, lists, dicts, booleans
 Won't evaluate functions or run code.
 Much safer for parsing user input when you expect simple data structures.
 
+
+MD5 used as password can be dangerous 
+It looks like MD5 is used as a password hash. MD5 is not considered a secure password hash because it can be cracked by an attacker in a short amount of time.
+What is MD5 and how it can be decoded easily.
+
+
+MD5 is considered insecure due to:
+
+---Collision attacks: Two different inputs can produce the same hash.
+This breaks the integrity of hashed data.
+---Extremely fast: MD5 is very fast to compute, which makes it ideal for brute-force and dictionary attacks (e.g., with GPUs).
+---Not designed for passwords: It lacks the built-in protections (like salting and key stretching) needed for secure password storage.
+
+Safe to use scryt, argon2
+
+
 ====================
 
 
