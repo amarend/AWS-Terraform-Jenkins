@@ -209,6 +209,26 @@ Was able to run and find out what can be done here?
 And saw that we have too many things to understand 
 -- YAML files
 -- Rules and how it works.
+
+
+
+First Code Analysis -- Python understanding 
+
+Refer code in vulnerable_code.py -- HACKER RANK REPO.
+
+When you use eval -- Can lead to execution of any parameter.
+Executes arbitrary Python code.
+Can evaluate anything — math, function calls, variable access, even file operations or OS commands.
+Security risk: If user input goes into eval(), an attacker can execute arbitrary code on your server.
+------eval("__import__('os').system('rm -rf /')")  # 💀
+
+
+
+ast.literal_eval - It is right approach to be used.
+Only evaluates Python literals: strings, numbers, tuples, lists, dicts, booleans, and None.
+Won't evaluate functions or run code.
+Much safer for parsing user input when you expect simple data structures.
+
 ====================
 
 
