@@ -243,6 +243,9 @@ This breaks the integrity of hashed data.
 ---Not designed for passwords: It lacks the built-in protections (like salting and key stretching) needed for secure password storage.
 
 Safe to use scryt, argon2
+********Read the below in detail when possible*** to understand in Detail --- Try to read more on Cryptography
+
+https://security.stackexchange.com/questions/211/how-to-securely-hash-passwords
 
 
 ====================
