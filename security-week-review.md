@@ -1,5 +1,5 @@
 Container Security and Cloud Security - Tool Focus is on 
-Qualys /n
+Qualys 
 Prisma -- Need to check 
 Aqua -- Need to check 
 
