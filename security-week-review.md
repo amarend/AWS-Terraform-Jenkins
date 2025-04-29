@@ -164,6 +164,26 @@ And understand vulnerabilities, and fix remediation part of it and then write ab
 No findings done.
 See if you could add new findings by scanning the code and then run the scan.
 
+For running from CLI we should run semgrep ci from the root directory.
+We can also run without using semgrep CLI when we do not have github or gitlab and then you can use semgrep scan.
+
+What is semgrep managed scan - It is a type of fastest way to scan a repo
+It basically removes the need to add CI/CD pipeline for repos, all repos you add can be scanned.
+
+In semgrep you can view the below findings -- 
+
+ Code for SAST findings -- More like coverity or veracode
+ Secrets for secrets findings
+ Supply Chain for SCA findings --- It is more or less like Blackduck
+
+
+ What is CROSS FILE ANALYSIS 
+
+Cross-file analysis (also known as interfile analysis) takes into account how information flows between files. 
+In particular, cross-file analysis includes cross-file taint analysis, which tracks unsanitized variables flowing from a source to a sink through arbitrarily many files. 
+Other analyses performed across files include constant propagation and type inference.
+
+
 ====================
 
 
