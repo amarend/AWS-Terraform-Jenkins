@@ -6,19 +6,19 @@ Aqua -- Need to check
 Container security - Build, Ship, Runtime and Host.
 Agent Based
 
+
 What all the scan runs on Registries and Build and also runtie containers
 -- Image can be vulnerable
 -- Image can have configuration defect
 -- Malware can be embedded
 -- Use of untrusted certificate
 -- Can have clear text message.
-========================
-
-
 
 Baisc Docker Concets  :
 1. What are layers in docker
 In Docker, layers are the building blocks of Docker images. Each command in a Dockerfile (like RUN, COPY, or ADD) creates a new layer. These layers stack on top of each other to form the final image.
+
+
 
 Base layer: Usually a minimal OS like ubuntu, alpine, or debian.
 Intermediate layers: Created by each subsequent instruction (like installing packages, copying files, etc.).
