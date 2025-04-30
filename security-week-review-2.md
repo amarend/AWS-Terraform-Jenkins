@@ -10,3 +10,30 @@ What are options to fix it do no use shell=True instead use the command as list 
 
 You could whitelist commands if that is needed
 
+========================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+======= These are to do later on.
+-- Look into more vulenerabilities 
+-- Do atleast one certification a quarter -- Very ambitious but do it.
+-- Target certifications are - CISA, CISM< CRISC, CISSP
+-- Understand the industry standards - FFIEC, NIST, c2m2, ISO 
+
